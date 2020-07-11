@@ -1,0 +1,12 @@
+{
+  "name": "rechargd",
+  "displayName": "rechargd",
+  "expo": {
+    "name": "rechargd",
+    "slug": "rechargd",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+abcd: {  
+  address: '123 Main St',
+  distance: 2.5,
+  img: require('../assets/rechargd blue logo.png'),
+  type: 'Universal Charger',
+  bio: 'Hello I am Tom',
+  cost: 42,
+  rating: 4.5,
+}
+
+efgh: {
+  address: '1 Fake St',
+  distance: 3.2,
+  img: '../assets/rechargd blue logo.png',
+  type: 'Tesla Type 2 (Menneke)',
+  bio: 'We have a study space',
+  cost: 70,
+  rating: 4,
+}
