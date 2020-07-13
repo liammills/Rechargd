@@ -1,8 +1,8 @@
 import * as React from "react";
-import { View } from "react-native";
+import { View, Button } from "react-native";
 import MapView from 'react-native-maps';
 
-export default function Map() {
+export default function Map({navigation}) {
   return (
     <View
       style={{
@@ -11,20 +11,20 @@ export default function Map() {
         alignItems: "center",
       }}
     >
-    //<Text>
-    //Hello World
-    //</Text>
-      <MapView style={{
+      <MapView showsUserLocation={true} style={{
         width: "100%",
         height: "100%",
       }}
       initialRegion={{
-        latitude: 37.78825,
-        longitude: -122.4324,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
+        latitude: -33.89152,
+        longitude: 151.27672,
+        latitudeDelta: 0.0092,
+        longitudeDelta: 0.0021,
       }}
-      />
+      /> 
+      <View style={{position: 'absolute', left: 30, top: 30}}>
+        <Button title = "Go back" onPress = {() => navigation.goBack()}/>
+      </View>
     </View>
   );
 }

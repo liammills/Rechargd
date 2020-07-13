@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, TextInput, Button } from 'react-native';
 import PropTypes from 'prop-types'
+import GoToScreen from './GoToScreen';
 
 export default class LoginForm extends React.Component {
-  state: {
+  state = {
     username: '',
     password: ''
   }
@@ -40,7 +41,7 @@ export default class LoginForm extends React.Component {
           placeholder="password"
           autoCorrect={false}
         />
-          <TouchableOpacity style={styles.login} onPress={() => console.log(this.state)}>
+          <TouchableOpacity style={styles.login} onPress={() => console.log(this.state), GoToScreen('Search')}>
             <Text style={{color:'white'}}>
             Login
             </Text>
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
   },
   normalFont: {
     fontSize: 12,
-    fontWeight: 200,
+    fontWeight: '200',
     textAlign: 'center',
     color: 'rgba(0,0,0,0.5)',
     marginTop: 20,
@@ -83,12 +84,11 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     fontSize: 14,
     textAlign: 'center',
-    textColor: '#fff',
+    color: '#fff',
     backgroundColor: '#5f87bd',
     borderWidth: 1,
     borderColor: '#ecf0f1',
     borderRadius: 100,
-    font: 'Arial',
     paddingVertical: 8,
     paddingHorizontal: 45,
   },
@@ -103,12 +103,11 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     fontSize: 14,
     textAlign: 'center',
-    textColor: '#fff',
+    color: '#fff',
     backgroundColor: '#5f87bd',
     borderWidth: 1,
     borderColor: '#ecf0f1',
     borderRadius: 100,
-    font: 'Arial',
     paddingVertical: 8,
     paddingHorizontal: 45,
   },

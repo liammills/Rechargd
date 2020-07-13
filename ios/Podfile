@@ -78,6 +78,11 @@ target 'rechargd' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  rn_maps_path = '../node_modules/react-native-maps'
+  pod 'react-native-google-maps', :path => rn_maps_path
+  pod 'GoogleMaps'
+  pod 'Google-Maps-iOS-Utils'
+
   use_unimodules!
   use_native_modules!
 
@@ -86,6 +91,8 @@ target 'rechargd' do
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable these next few lines.
   add_flipper_pods!
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+
   post_install do |installer|
     flipper_post_install(installer)
   end

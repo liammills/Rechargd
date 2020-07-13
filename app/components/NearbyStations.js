@@ -48,7 +48,7 @@ export default function NearbyStations() {
 const styles = StyleSheet.create({
   container1: {
     width: 120,
-    alignItems: 'left',
+    //alignItems: 'left',
     margin: 8,
     padding: 3
   },
@@ -63,5 +63,3 @@ const styles = StyleSheet.create({
     color: '#404040'
   }
 });
-
-const fuck_you = 123;

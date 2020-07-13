@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { Text, View, TouchableOpacity, Image, StyleSheet, TextInput, ScrollView } from 'react-native';
+import { Text, View, TouchableOpacity, StyleSheet, TextInput, ScrollView } from 'react-native';
 import Constants from 'expo-constants';
 
 import NearbyStations from './NearbyStations';
-import AdvancedSearch from './AdvancedSearch';
 
 export default class Search extends React.Component {
   state = {
@@ -30,18 +29,31 @@ export default class Search extends React.Component {
       <View>
         <TextInput
           style={styles.search}
+          value={this.state.whereTo}
           onChangeText={this.handleLocationChange}
           placeholder="Where do you want to search?"
         />
+        <TouchableOpacity style={{backgroundColor: '#2F578D', padding:3, width: 30}}
+        onPress={()=>console.log(this.state.whereTo)}>
+          <Text style={{color:'white', margin:5}}>Go</Text>
+          </TouchableOpacity>
       </View>
       <View style={{flexDirection:'row'}}>
-        <Text style={styles.goToText}>
+        <Text style={styles.goToText} onPress={()=>this.props.navigation.navigate('Map')}>
           Go to current map
         </Text>
-        <Text style={styles.advSearchText} onPress={this.toggleAdvSearch}>
-          Advanced Search
-        </Text>
-        {this.state.advSearch && (<AdvancedSearch />)}
+        {this.state.advSearch ? (
+          <View style={{backgroundColor: 'rgba(95, 135, 189,0.6)', width: 320, borderRadius: 10, margin:5}}>
+          <View style={styles.container}>
+            <Text style={styles.text} onPress={() => this.toggleAdvSearch}>
+            X
+            </Text>
+          </View>
+        </View>
+        ):
+        (<Text style={styles.advSearchText} onPress={this.toggleAdvSearch}>
+            Advanced Search
+          </Text>)}
       </View>
       <ScrollView>
         <NearbyStations />
@@ -61,13 +73,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: Constants.statusBarHeight,
     backgroundColor: '#ecf0f1',
-    padding: 8,
+    padding: 0,
     
-  },
-  carView: {
-    justifyContent: 'right',
-    alignItems: 'flex-end',
-    margin:0
   },
   search: {
     borderBottomWidth: 0.4,
@@ -102,4 +109,8 @@ const styles = StyleSheet.create({
     paddingRight: 15,
     marginBottom: 5
   },
+  text: {
+    padding: 3,
+    color: '#404040',
+  }
 });

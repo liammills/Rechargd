@@ -3,6 +3,7 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 #import <UMCore/UMModuleRegistry.h>
 #import <UMReactNativeAdapter/UMNativeModulesProxy.h>
@@ -17,6 +18,7 @@
 #import <FlipperKitNetworkPlugin/FlipperKitNetworkPlugin.h>
 #import <SKIOSNetworkPlugin/SKIOSNetworkAdapter.h>
 #import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
+
 
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
@@ -40,6 +42,8 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [GMSServices provideAPIKey:@"AIzaSyDy6mthvB3Qa1DQn2dtxrRp-5DTmD-v0Ts"];
+
 #if DEBUG
   InitializeFlipper(application);
 #endif

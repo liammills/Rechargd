@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 
-export default function AdvancedSearch() {
-
+const AdvancedSearch = advSearch => {
   return (
     <View style={{backgroundColor: 'rgba(95, 135, 189,0.6)', width: 320, borderRadius: 10, margin:5}}>
       <View style={styles.container}>
-        <Text style={styles.text} onPress={this.toggleAdvSearch}>
+        <Text style={styles.text} onPress={() => advSearch = false}>
         X
         </Text>
       </View>
@@ -17,7 +16,7 @@ export default function AdvancedSearch() {
 const styles = StyleSheet.create({
   container: {
     width: 120,
-    alignItems: 'left',
+    alignItems: 'flex-end',
     margin: 8,
     padding: 3
   },
@@ -26,3 +25,5 @@ const styles = StyleSheet.create({
     color: '#404040',
   }
 });
+
+export default AdvancedSearch;
