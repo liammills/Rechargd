@@ -45,7 +45,7 @@ Kim to write
 
 ![Rechargd architecture diagram](/images/architecture-diagram.png)
 
-This solution is a full sharing platform app - including payment and messaging integration.
+This solution is an all-in-one sharing platform, built on a react native front end and node back end, and integrating Google Maps, Auth0, Stripe and Twilio. It is hosted on the IBM Cloud.
 
 1. The user launches the mobile app and can either list their station or rent out a station.
 1. The user can either search their nearby vicinity, a specific location or en route to a location for charging stations. Furthermore, when listing stations they can be geocoded and reverse geocoded as needed.
