@@ -49,8 +49,8 @@ This solution is an all-in-one sharing platform, built on a react native front e
 
 1. The user launches the mobile app and can either list their station or rent out a station.
 1. The user can either search their nearby vicinity, a specific location or en route to a location for charging stations. Furthermore, when listing stations they can be geocoded and reverse geocoded as needed.
-1. The user can login securely using Auth0, and trust that their details are in good hands.
-1. The user can trust that their payment details are handled securely by Stripe Payments.
+1. The user can login securely, and trust that their details are in good hands.
+1. The user can trust that their payment details are handled securely.
 1. The user can message their renter easily in case of any issue, and can easily authenticate their account.
 
 ## Documents
@@ -105,25 +105,13 @@ Use the following steps to get Rechargd up and running.
 1. [Run the server](#3-run-the-server).
 1. [Run the mobile application](#4-run-the-mobile-application).
 
-### 1. Set up an instance of Watson Assistant
-
-Log in to IBM Cloud and provision a Watson Assistant instance.
-
-1. Provision an instance of **Watson Assistant** from the [IBM Cloud catalog](https://cloud.ibm.com/catalog/services/watson-assistant).
-1. Launch the Watson Assistant service.
-1. [Create an **Assistant**](https://cloud.ibm.com/docs/assistant?topic=assistant-assistant-add).
-1. [Add a dialog skill](https://cloud.ibm.com/docs/assistant?topic=assistant-skill-dialog-add) to the **Assistant** by importing the [`starter-kit-flood-dialog-skill.json`](./starter-kit/assistant/starter-kit-flood-dialog-skill.json) file.
-1. Go back to All Assistants page, open **Settings** from the action menu ( **`⋮`** ) and click on **API Details**.
-1. Note the **Assistant ID** and **API Key**. From the **Assistant URL**, make note of the base URL/domain (e.g., `https://api.us-south.assistant.watson.cloud.ibm.com` or `https://api.eu-gb.assistant.watson.cloud.ibm.com`) but do not include the directory/path.
-1. Go to **Preview Link** to get a link to test and verify the dialog skill.
-
-### 2. Generate an API Key from the HERE Developer Portal
+### 1. Generate an API Key from the HERE Developer Portal
 
 The application uses HERE Location Services for maps, searching, and routing.
 
 To access these services, an API Key is required. Follow the instructions outlined in the [HERE Developer Portal](https://developer.here.com/ref/IBM_starterkit_Disasters2020?create=Freemium-Basic) to [generate a JavaScript API Key](https://developer.here.com/documentation/authentication/dev_guide/topics/api-key-credentials.html).
 
-### 3. Run the server
+### 2. Run the server
 
 To set up and launch the server application:
 
@@ -144,7 +132,7 @@ To set up and launch the server application:
             1. Push the app to IBM Cloud: `ibmcloud app push`.
             1. The server can be accessed at the URL shown in the console (`routes`) after the app successful uploads and starts (for example,  https://solution-starter-kit-disasters-2020-server-random-route.bluemix.net).
 
-### 4. Run the mobile application
+### 3. Run the mobile application
 
 To run the mobile application (using the Xcode iOS Simulator or Android Studio Emulator):
 
@@ -169,7 +157,6 @@ To run the mobile application (using the Xcode iOS Simulator or Android Studio E
 ## Resources
 
 - [IBM Cloud](https://www.ibm.com/cloud)
-- [Watson Assistant](https://cloud.ibm.com/docs/assistant?topic=assistant-getting-started)
 - [HERE Location Services](https://developer.here.com/documentation)
 - [React Native](https://reactnative.dev/)
 
