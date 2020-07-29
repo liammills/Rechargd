@@ -1,6 +1,6 @@
 # Rechargd
 
-This solution
+This solution is tackling climate change by encouraging the uptake of electric vehicles.
 
 ## Author
 Liam Mills - University of Sydney
@@ -45,7 +45,7 @@ Kim to write
 
 ![Rechargd architecture diagram](/images/architecture-diagram.png)
 
-This solution is an all-in-one sharing platform, built on a react native front end and node back end, and integrating Google Maps, Auth0, Stripe and Twilio. It is hosted on the IBM Cloud.
+This solution is an all-in-one sharing platform, built on a React Native front-end and Node back-end, and integrating Google Maps, Auth0, Stripe and Twilio. It is hosted on the IBM Cloud.
 
 1. The user launches the mobile app and can either list their station or rent out a station.
 1. The user can either search their nearby vicinity, a specific location or en route to a location for charging stations. Furthermore, when listing stations they can be geocoded and reverse geocoded as needed.
