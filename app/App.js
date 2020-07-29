@@ -1,30 +1,87 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-
-/*import LoginForm from './components/LoginForm';
-import Welcome from './components/Welcome';*/
-import Search from './components/Search';
-import Map from './components/Map';
-
+import { AuthContext } from './context';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-//import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-//import { createSwitchNavigator } from 'react-navigation';
 
-const Stack = createStackNavigator();
-//const Tab = createBottomTabNavigator();
+import SideScreenDriver from './router/SideScreenDriver';
+import SideScreenProvider from './router/SideScreenProvider';
+import AuthStackScreen from './router/AuthStack';
+import LoadingScreen from './screens/LoadingScreen';
 
+console.log(process.env.REACT_APP_GOOGLE_API_KEY)
 
 const App = () => {
-    return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Map">
-        <Stack.Screen name="Search" component={Search} />
-        <Stack.Screen name="Map" component={Map} />
-      </Stack.Navigator>
-    </NavigationContainer>
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [userToken, setUserToken] = React.useState(null);
+  const [isDriver, setIsDriver] = React.useState(false);
+
+  const authContext = React.useMemo(() => {
+    return {
+      signInDriver: () => {
+        setIsLoading(false);
+        setUserToken('abc');
+        setIsDriver(true);
+      },
+      signInProvider: () => {
+        setIsLoading(false);
+        setUserToken('abc');
+        setIsDriver(false);
+      },      
+      registerDriver: () => {
+        setIsLoading(false);
+        setUserToken('abc');
+        setIsDriver(true);
+      },
+      registerProvider: () => {
+        setIsLoading(false);
+        setUserToken('abc');
+        setIsDriver(false);
+      },
+      signOut: () => {
+        setIsLoading(false);
+        setUserToken(null);
+        setIsDriver(false);
+      },
+      switchAccount: () => {
+        setIsLoading(false);
+        setIsDriver(!isDriver);
+      }
+    }
+  })
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  }, [])
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
+  if (!userToken) { return (
+    <AuthContext.Provider value={authContext}>
+      <NavigationContainer>
+          <AuthStackScreen />
+        </NavigationContainer>
+    </AuthContext.Provider>
+  )}
+
+  return (
+    <AuthContext.Provider value={authContext}>
+      <NavigationContainer>
+        {isDriver ? (
+          <SideScreenDriver />) : (
+            <SideScreenProvider />
+          )}
+      </NavigationContainer>
+    </AuthContext.Provider>
   );
   
 };
 
 export default App;
+
+
+// Go to station -- book -- confirmation from other party
+// List station
