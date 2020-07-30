@@ -91,10 +91,6 @@ export default class NewListing extends React.Component {
   render() {
     return (
       <SafeAreaView>
-      <ScrollView
-      style={{width:'100%', height: '100%'}}
-      keyboardShouldPersistTaps='handled'
-      >
         <View style={styles.container}>
           <Text style={styles.title}>
             List a station
@@ -160,6 +156,7 @@ export default class NewListing extends React.Component {
             <Text style={styles.dayText}>Availability</Text>
 
             <View style={{marginBottom:8}}>
+            <ScrollView>
             {this.state.availability.map((item, index) => (
               <View style={styles.avView}>
                 <Text style={styles.avText}>
@@ -172,6 +169,7 @@ export default class NewListing extends React.Component {
                 </TouchableOpacity>
               </View>
             ))}
+            </ScrollView>
             </View>
 
             <View style={{ flexDirection: 'row' }}>
@@ -291,7 +289,6 @@ export default class NewListing extends React.Component {
             </TouchableOpacity>
           </View>
         </View>
-      </ScrollView>
       </SafeAreaView>
     )
   }

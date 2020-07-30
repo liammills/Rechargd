@@ -13,9 +13,8 @@ Liam Mills - University of Sydney
 4. [How it works](#how-it-works)
 5. [Diagrams](#diagrams)
 6. [Documents](#documents)
-7. [Datasets](#datasets)
-8. [Technology](#technology)
-9. [Getting started](#getting-started)
+7. [Technology](#technology)
+8. [Getting started](#getting-started)
 9. [Resources](#resources)
 10. [License](#license)
 
