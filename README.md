@@ -30,7 +30,8 @@ Kim to write
 
 ## Video
 
-[![Rechargd:  ...](./images/video-thumbnail.png)](https://youtube.com)
+[![Rechargd: a proposed aid to climate change. Video edited and voiced by Connor Russell (University of Sydney).](./images/video-thumbnail.png)](https://youtube.com)
+Rechargd: a proposed aid to climate change. Video edited and voiced by Connor Russell (University of Sydney).
 
 ## The idea
 
