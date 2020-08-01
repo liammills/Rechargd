@@ -8,8 +8,6 @@ import SideScreenProvider from './router/SideScreenProvider';
 import AuthStackScreen from './router/AuthStack';
 import LoadingScreen from './screens/LoadingScreen';
 
-console.log(process.env.REACT_APP_GOOGLE_API_KEY)
-
 const App = () => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [userToken, setUserToken] = React.useState(null);

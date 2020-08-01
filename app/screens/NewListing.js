@@ -52,10 +52,6 @@ export default class NewListing extends React.Component {
   handleChargerChange = charger => { this.setState({ chargerType }) }
 
   // Time picker functions
-  //updateTimeAvailability = (startTime, endTime, day) => {this.setState({day: [startTime, endTime]})}
-  onCancel() {
-    this.TimePicker.close();
-  }
   onConfirmOpen = (event, date) => {
     this.setState({ open: date.toLocaleTimeString().substring(0,5)})
     this.setState({showOpen: false});
