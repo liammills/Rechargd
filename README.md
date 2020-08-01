@@ -64,8 +64,8 @@ This solution is an all-in-one sharing platform, built on a React Native front-e
 ## Documents
 
 - [ClimateWorks Australia “The State of Electric Vehicles in Australia” report](https://www.climateworksaustralia.org/wp-content/uploads/2018/06/climateworks_australia_state_of_electric_vehicles2_june_2018.pdf)
-- [The Guardian “Electric cars produce less CO2 than petrol vehicles, study confirms” article] (https://www.theguardian.com/environment/2020/mar/23/electric-cars-produce-less-co2-than-petrol-vehicles-study-confirms)
-- [The Driven - “Norway horrified as new rates make ev charging prices higher than petrol” article] (https://thedriven.io/2020/01/20/norway-horrified-as-new-rates-make-ev-charging-prices-higher-than-petrol/)
+- [The Guardian “Electric cars produce less CO2 than petrol vehicles, study confirms” article](https://www.theguardian.com/environment/2020/mar/23/electric-cars-produce-less-co2-than-petrol-vehicles-study-confirms)
+- [The Driven - “Norway horrified as new rates make ev charging prices higher than petrol” article](https://thedriven.io/2020/01/20/norway-horrified-as-new-rates-make-ev-charging-prices-higher-than-petrol/)
 
 ## Technology
 
